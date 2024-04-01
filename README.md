@@ -19,13 +19,13 @@ The project is centered around three key patterns of real-time analytics:
 <br>
 
 ## Technology used:
- - Apache Kafka
- - Apache Flink
- - Postgres 
- - PySpark
- - Docker
- - GCP Big Query
- - GCP Looker Studio
+ - Apache Kafka (Simulating data)
+ - Apache Flink (Real time analytics)
+ - Postgres (Database)
+ - PySpark (Transformations)
+ - Docker (Containerizing)
+ - GCP Big Query (Datawarehouse)
+ - GCP Looker Studio (Dashboarding)
  - Python, Java
 
  <br>
