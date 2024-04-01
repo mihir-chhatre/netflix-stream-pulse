@@ -3,21 +3,33 @@
 > Status: **TBD**
 
 ## Project Overview
-*(Brief description of what this project does)*
+The Netflix-Stream-Pulse project is designed as a real-time data processing and analytics platform, simulating Netflix user activity.
 
 <br>
 
-## Technology used:
- - Apache Kafka -
- - Apache Flink - 
- - Postgres - 
- - PySpark -
- - Docker -
- - GCP Big Query -
- - GCP Looker Studio -  
+## Problem Statement
+In today’s fast-paced online streaming arena, swiftly and accurately understanding user behavior is not just beneficial; it's essential. The challenge lies in the sheer volume and rapidity of data generated, which can be overwhelming. Traditional data processing methods often stumble under the weight of such real-time, heavy data flows, leading to critical delays in deriving insights and impacting decision-making. The Netflix-Stream-Pulse project ambitiously confronts this challenge. It meticulously simulates an environment where continuous streams of user data—encompassing viewing patterns, profile interactions, and more—are efficiently captured and processed. Leveraging a robust combination of cutting-edge technologies like Apache Kafka, Apache Flink, PostgreSQL, PySpark, and Google BigQuery, the project crafts an innovative end-to-end pipeline. This sophisticated setup not only adeptly handles the demands of large-scale, real-time data but also excels in extracting valuable insights from it. By processing and analyzing this streaming data in a scalable, efficient manner, the project illuminates how strategic data utilization can significantly enhance user experiences in the streaming service sector, transforming raw data into a goldmine of actionable intelligence.
 
-### Architecture
-The Netflix-Stream-Pulse project is designed as a real-time data processing and analytics platform, simulating Netflix user activity. The architecture is built upon a series of interconnected services and technologies, ensuring efficient data flow and processing.
+This project focuses on three real-time analytics pattens:
+
+1. Demographic and Maturity Rating Trends: By tracking the preferences and viewership patterns across different demographics and maturity ratings, we can tailor content recommendations and marketing strategies more effectively. Understanding these trends is vital for curating a diverse and appealing content library that resonates with a broad audience spectrum.
+
+2. Age Group and Gender Trends: By dissecting viewership trends across different age groups and genders, we gain valuable insights into the varying content preferences and viewing habits. This enables us to craft more targeted content strategies and promotional campaigns, ensuring that each segment of our audience finds content that appeals to their unique tastes and preferences.
+
+3. Device and Genre Trends: Analyzing the correlation between the types of devices used and the genres preferred allows us to optimize streaming quality and user interface design for various devices. This insight helps in enhancing the overall user experience, ensuring that content is not only accessible but also enjoyable on the preferred devices of our audience.
+
+## Technology used:
+ - Apache Kafka
+ - Apache Flink
+ - Postgres 
+ - PySpark
+ - Docker
+ - GCP Big Query
+ - GCP Looker Studio
+ - Python, Java
+
+### Architecture & Technology used
+The architecture is built upon a series of interconnected services and technologies, ensuring efficient data flow and processing.
 
 1. Data Production: The process begins with a Python-based Kafka producer, simulating real-time user data related to Netflix, including user profiles and viewing habits. This data is produced and continuously streamed to a Kafka topic.
 
@@ -105,16 +117,11 @@ If above links are down, please use the below screenshots are reference:
    ![Gender & Age Group dashboard](/images/GenderAgeGroup.png "Gender & Age Group dashboard")
 
 
-
-## Contributing
-
-Please read [CONTRIBUTING.md](LINK_TO_CONTRIBUTING_GUIDELINES) for details on our code of conduct, and the process for submitting pull requests to us.
-
 <br>
 
 ## Authors
 
-* **Your Name** - *Initial work* - [YourGithubProfile](LINK_TO_YOUR_GITHUB_PROFILE)
+* **Mihr Chhatre** - *Initial work* - [YourGithubProfile](https://github.com/mihir-chhatre)
 
 <br>
 
