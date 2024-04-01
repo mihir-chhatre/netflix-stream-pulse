@@ -7,9 +7,27 @@
 
 <br>
 
+## Technology used:
+ - Apache Kafka -
+ - Apache Flink - 
+ - Postgres - 
+ - PySpark -
+ - Docker -
+ - GCP Big Query -
+ - GCP Looker Studio -  
 
 ### Architecture
-*(Description of the architecture)*
+The Netflix-Stream-Pulse project is designed as a real-time data processing and analytics platform, simulating Netflix user activity. The architecture is built upon a series of interconnected services and technologies, ensuring efficient data flow and processing.
+
+1. Data Production: The process begins with a Python-based Kafka producer, simulating real-time user data related to Netflix, including user profiles and viewing habits. This data is produced and continuously streamed to a Kafka topic.
+
+2. Real-time Data Processing: An Apache Flink application is employed as a consumer, which subscribes to the Kafka topic. It processes these events in real-time, performing analytics to derive insights from the streaming data. Every 5 minutes, the aggregated data is stored in PostgreSQL tables for persistent storage and further analysis.
+
+3. Data Transformation and Loading: Upon completion of data production, a special 'complete' message is published to a separate Kafka topic. A PySpark application, listening to this second topic, triggers once it receives the 'complete' event. It then extracts data from the PostgreSQL tables, performs necessary transformations, and loads the processed data into Google BigQuery. This step is crucial for preparing the data for advanced analytics and visualization.
+
+4. Data Storage Optimization: In Google BigQuery, the tables are optimized with clustering and partitioning techniques. This ensures efficient data management and query performance, enabling scalable analytics solutions.
+
+5. Visualization: Finally, Looker Studio is used to create interactive dashboards and visualizations. These visualizations provide insights into various user metrics such as device usage, genre preferences, location-based trends, maturity ratings, gender, and age group distributions.
 
 #### Architecture Diagram
 ![Architecture Diagram](/images/architecture_diagram.png "Architecture Diagram")
@@ -22,14 +40,14 @@ These instructions will get you a copy of the project up and running on your loc
 
 <br>
 
-### Prerequisites
+### => Prerequisites
 
 1. Docker - Follow the installation guide [here](https://docs.docker.com/engine/install/).
 2. A Google Cloud Platform (GCP) account. If you don't have one, you can set one up [here](https://cloud.google.com/).
 
 <br>
 
-### Installation
+### => Installation
 
 A step by step series of examples that tell you how to get a development env running:
 
@@ -76,10 +94,15 @@ Links to Dashboards -
    - [Location & Maturity Raing dashboard](https://lookerstudio.google.com/reporting/9537f7c7-24ea-403c-8ae3-2f0251f5f6be) 
    - [Gender & Age Group dashboard](https://lookerstudio.google.com/reporting/b4c9e8d2-6f19-4e4e-b7ea-306caba1b97b)
 
+<br>
+
 If above links are down, please use the below screenshots are reference:
-![Device & Genere dashboard](/images/DeviceGenre.png "Device & Genere dashboard")
-![Location & Maturity Raing dashboard](/images/LocationMR.png "Location & Maturity Raing dashboard")
-![Gender & Age Group dashboard](/images/GenderAgeGroup.png "Gender & Age Group dashboard")
+   - Device & Genere trends: <br>
+   ![Device & Genere dashboard](/images/DeviceGenre.png "Device & Genere dashboard")
+   - Location & Maturity Raing trends: <br>
+   ![Location & Maturity Raing dashboard](/images/LocationMR.png "Location & Maturity Raing dashboard")
+   - Gender & Age Group trends: <br>
+   ![Gender & Age Group dashboard](/images/GenderAgeGroup.png "Gender & Age Group dashboard")
 
 
 
