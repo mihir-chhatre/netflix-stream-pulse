@@ -84,7 +84,7 @@ A step by step series of examples that tell you how to get a development env run
    - Important step: Download this JSON key.
 
 5. **Configure the Project:**
-   - Clone this repository.
+   - Download a ZIP of this repository.
    - Add the downloaded JSON file from step 4 to the `data-upload` folder of this project.
    - Open `docker-compose.yaml` file, this is in the 'netflix-stream-pulse' folder.
    - Replace `<ADD JSON FILE NAME HERE>` with filename of JSON filename from above step.
