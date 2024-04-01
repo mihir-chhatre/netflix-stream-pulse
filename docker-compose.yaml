@@ -90,7 +90,7 @@ services:
       - postgres
     platform: linux/amd64
     environment:
-      GCP_PROJECT: "<ADD PROJECT NAME HERE>"         # Example will look like => GCP_PROJECT: "dezoomcamp2024_finalproject"
+      GCP_PROJECT: "<ADD PROJECT ID HERE>"         # Example will look like => GCP_PROJECT: "dezoomcamp2024_finalproject"
       KAFKA_SERVER: "kafka:9092"
       ZOOKEEPER_SERVER: "zookeeper:32181"
       PRODUCER_INTERVAL: 100

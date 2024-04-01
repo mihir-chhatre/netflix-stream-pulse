@@ -67,7 +67,7 @@ These instructions will get you a copy of the project up and running on your loc
 A step by step series of examples that tell you how to get a development env running:
 
 1. **Create a new project on Google Cloud with any name**
-   - `Note`: Keep a track of the project name as you will have to use it later.
+   - `Note`: Keep a track of the Project ID as you will have to use it later.
 
 2. **Inside the project created in the above step, create a BigQuery dataset (refer on how to create dataset [here](https://cloud.google.com/bigquery/docs/datasets#create-dataset)):**
    - Dataset Name: `real_time_analytics`
@@ -86,16 +86,16 @@ A step by step series of examples that tell you how to get a development env run
 5. **Configure the Project:**
    - Clone this repository.
    - Add the downloaded JSON file from step 4 to the `data-upload` folder of this project.
-   - Open docker-compose.yaml file.
+   - Open `docker-compose.yaml` file, this is in the 'netflix-stream-pulse' folder.
    - Replace `<ADD JSON FILE NAME HERE>` with filename of JSON filename from above step.
-   - Replace `<ADD PROJECT NAME HERE>` with name of GCP project created in step 1.
+   - Replace `<ADD PROJECT ID HERE>` with ID of GCP project created in step 1.
    
 
 4. **Run the Project:**
    - Open the Docker application downloaded as a part of prerequisites and keep the application open before moving to next step.
-   - Open the terminal inside 'netflix-stream-pulse' downloaded project folder. (This repo has 3 subfolders, docker-compose.yaml and README file)
+   - Open the terminal inside 'netflix-stream-pulse-main' downloaded project folder. (This repo has 5 subfolders, docker-compose.yaml, LICENSE.md and README file)
    - Execute `docker-compose up`.
-   - <u>Note</u>: This step will take approximately 2 minutes. The entire program will execute for approximately 5 minutes. Look out for the message `***  DATA SIMULATION COMPLETED ***` on your terminal. Once you see this message, you can check your GBQ instance.
+   - <u>Note</u>: This step will take approximately 2 minutes. The entire program will execute for approximately 5 minutes. Look out for the message `***  DATA SIMULATION COMPLETED ***` on your terminal. Once you see this message, you can check your Google BigQuery instance.
 
 
 <br>
