@@ -129,7 +129,7 @@ If above links are down, please use the below screenshots are reference:
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LINK_TO_LICENSE) file for details
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
 <br>
 
