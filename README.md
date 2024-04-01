@@ -1,11 +1,11 @@
 # Netflix-Stream-Pulse
 
 > Status: **DONE**
+<p>Status: <span style="color: green;"><strong>DONE</strong></span></p>
+
 
 ## Project Overview
 The Netflix-Stream-Pulse project is designed simulating Netflix user activity, providing a platform for real-time data processing and analytics.
-
-<br>
 
 ## Problem Statement
 In today’s fast-paced online streaming arena, swiftly and accurately understanding user behavior is not just beneficial; it's essential. The challenge lies in the sheer volume and rapidity of data generated, which can be overwhelming. Traditional data processing methods often stumble under the weight of such real-time, heavy data flows, leading to critical delays in deriving insights and impacting decision-making. The Netflix-Stream-Pulse project ambitiously confronts this challenge. It meticulously simulates an environment where continuous streams of user data—encompassing viewing patterns, profile interactions, and more—are efficiently captured and processed. Leveraging a robust combination of cutting-edge technologies like Apache Kafka, Apache Flink, PostgreSQL, PySpark, and Google BigQuery, the project crafts an innovative end-to-end pipeline. This sophisticated setup not only adeptly handles the demands of large-scale, real-time data but also excels in extracting valuable insights from it. By processing and analyzing this streaming data in a scalable, efficient manner, the project illuminates how strategic data utilization can significantly enhance user experiences in the streaming service sector, transforming raw data into a goldmine of actionable intelligence.
@@ -124,7 +124,7 @@ If above links are down, please use the below screenshots are reference:
 
 ## Authors
 
-* **Mihr Chhatre** - *Initial work* - [YourGithubProfile](https://github.com/mihir-chhatre)
+* **Mihr Chhatre** - [YourGithubProfile](https://github.com/mihir-chhatre)
 
 <br>
 
@@ -136,6 +136,6 @@ This project is licensed under the MIT License - see the [LICENSE.md](LINK_TO_LI
 
 ## Acknowledgments
 
-This project was developed as a part of DEZoompcqmp2024, a huge shoutout to the entire team of for organizing and techning concepts through this zoomcamp.
+This project was created as a part of DEZoompcamp2024, and I'd like to extend a big thank you to the entire organizing team for their efforts in hosting and teaching concepts throughout this zoomcamp.
 
 
