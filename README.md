@@ -1,7 +1,5 @@
 # Netflix-Stream-Pulse
 
-> Status: **Complete**
-
 ## Project Overview
 The Netflix-Stream-Pulse project is designed simulating Netflix user activity, providing a platform for real-time data processing and analytics.
 
