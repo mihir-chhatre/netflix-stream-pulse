@@ -10,7 +10,7 @@ The Netflix-Stream-Pulse project is designed as a real-time data processing and 
 ## Problem Statement
 In today’s fast-paced online streaming arena, swiftly and accurately understanding user behavior is not just beneficial; it's essential. The challenge lies in the sheer volume and rapidity of data generated, which can be overwhelming. Traditional data processing methods often stumble under the weight of such real-time, heavy data flows, leading to critical delays in deriving insights and impacting decision-making. The Netflix-Stream-Pulse project ambitiously confronts this challenge. It meticulously simulates an environment where continuous streams of user data—encompassing viewing patterns, profile interactions, and more—are efficiently captured and processed. Leveraging a robust combination of cutting-edge technologies like Apache Kafka, Apache Flink, PostgreSQL, PySpark, and Google BigQuery, the project crafts an innovative end-to-end pipeline. This sophisticated setup not only adeptly handles the demands of large-scale, real-time data but also excels in extracting valuable insights from it. By processing and analyzing this streaming data in a scalable, efficient manner, the project illuminates how strategic data utilization can significantly enhance user experiences in the streaming service sector, transforming raw data into a goldmine of actionable intelligence.
 
-This project focuses on three real-time analytics pattens:
+The project is centered around three key patterns of real-time analytics:
 
 1. Demographic and Maturity Rating Trends: By tracking the preferences and viewership patterns across different demographics and maturity ratings, we can tailor content recommendations and marketing strategies more effectively. Understanding these trends is vital for curating a diverse and appealing content library that resonates with a broad audience spectrum.
 
@@ -28,7 +28,7 @@ This project focuses on three real-time analytics pattens:
  - GCP Looker Studio
  - Python, Java
 
-### Architecture & Technology used
+## Architecture
 The architecture is built upon a series of interconnected services and technologies, ensuring efficient data flow and processing.
 
 1. Data Production: The process begins with a Python-based Kafka producer, simulating real-time user data related to Netflix, including user profiles and viewing habits. This data is produced and continuously streamed to a Kafka topic.
@@ -52,14 +52,14 @@ These instructions will get you a copy of the project up and running on your loc
 
 <br>
 
-### => Prerequisites
+### Prerequisites
 
 1. Docker - Follow the installation guide [here](https://docs.docker.com/engine/install/).
 2. A Google Cloud Platform (GCP) account. If you don't have one, you can set one up [here](https://cloud.google.com/).
 
 <br>
 
-### => Installation
+### Installation
 
 A step by step series of examples that tell you how to get a development env running:
 
@@ -132,4 +132,5 @@ This project is licensed under the MIT License - see the [LICENSE.md](LINK_TO_LI
 <br>
 
 ## Acknowledgments
+
 
