@@ -73,8 +73,13 @@ A step by step series of examples that tell you how to get a development env run
 
 Links to Dashboards -
    - [Device & Genere dashboard](https://lookerstudio.google.com/reporting/3d089d03-28d9-49ef-b1d2-8ac887ac209c)
-   - [] 
-<br>
+   - [Location & Maturity Raing dashboard](https://lookerstudio.google.com/reporting/9537f7c7-24ea-403c-8ae3-2f0251f5f6be) 
+   - [Gender & Age Group dashboard](https://lookerstudio.google.com/reporting/b4c9e8d2-6f19-4e4e-b7ea-306caba1b97b)
+
+If above links are down, please use the below screenshots are reference:
+![Device & Genere dashboard](/images/DeviceGenre.png "Device & Genere dashboard")
+![Location & Maturity Raing dashboard](/images/LocationMR.png "Location & Maturity Raing dashboard")
+![Gender & Age Group dashboard](/images/GenderAgeGroup.png "Gender & Age Group dashboard")
 
 
 
