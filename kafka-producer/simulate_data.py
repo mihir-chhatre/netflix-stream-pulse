@@ -77,6 +77,8 @@ def main():
     producer.send(completionTopic, value=completion_message)
     producer.flush()
 
+    print("\n\n *** Data simulation completed! ***\n")
+
 if __name__ == "__main__":
     main()
 
