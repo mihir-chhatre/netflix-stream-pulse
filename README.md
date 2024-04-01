@@ -1,9 +1,9 @@
 # Netflix-Stream-Pulse
 
-> Status: **TBD**
+> Status: **DONE**
 
 ## Project Overview
-The Netflix-Stream-Pulse project is designed as a real-time data processing and analytics platform, simulating Netflix user activity.
+The Netflix-Stream-Pulse project is designed simulating Netflix user activity, providing a platform for real-time data processing and analytics.
 
 <br>
 
@@ -18,6 +18,8 @@ The project is centered around three key patterns of real-time analytics:
 
 3. Device and Genre Trends: Analyzing the correlation between the types of devices used and the genres preferred allows us to optimize streaming quality and user interface design for various devices. This insight helps in enhancing the overall user experience, ensuring that content is not only accessible but also enjoyable on the preferred devices of our audience.
 
+<br>
+
 ## Technology used:
  - Apache Kafka
  - Apache Flink
@@ -27,6 +29,8 @@ The project is centered around three key patterns of real-time analytics:
  - GCP Big Query
  - GCP Looker Studio
  - Python, Java
+
+ <br>
 
 ## Architecture
 The architecture is built upon a series of interconnected services and technologies, ensuring efficient data flow and processing.
@@ -50,7 +54,6 @@ The architecture is built upon a series of interconnected services and technolog
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-<br>
 
 ### Prerequisites
 
@@ -132,5 +135,7 @@ This project is licensed under the MIT License - see the [LICENSE.md](LINK_TO_LI
 <br>
 
 ## Acknowledgments
+
+This project was developed as a part of DEZoompcqmp2024, a huge shoutout to the entire team of for organizing and techning concepts through this zoomcamp.
 
 
