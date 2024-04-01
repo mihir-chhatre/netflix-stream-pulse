@@ -59,12 +59,23 @@ A step by step series of examples that tell you how to get a development env run
    
 
 4. **Run the Project:**
+   - Open the Docker application downloaded as a part of prerequisites and keep the application open before moving to next step.
    - Open the terminal inside 'netflix-stream-pulse' downloaded project folder. (This repo has 3 subfolders, docker-compose.yaml and README file)
    - Execute `docker-compose up`.
-   - Note: This step will take approximately 2 minutes. The entire program will execute for approximately 5 minutes. Look out for the message `***  DATA SIMULATION COMPLETED ***` on your terminal. Once you see this message, you can check your GBQ instance.
+   - <u>Note</u>: This step will take approximately 2 minutes. The entire program will execute for approximately 5 minutes. Look out for the message `***  DATA SIMULATION COMPLETED ***` on your terminal. Once you see this message, you can check your GBQ instance.
 
 
 <br>
+
+
+
+## Dashboarded results:
+
+Links to Dashboards -
+   - [Device & Genere dashboard](https://lookerstudio.google.com/reporting/3d089d03-28d9-49ef-b1d2-8ac887ac209c)
+   - [] 
+<br>
+
 
 
 ## Contributing
