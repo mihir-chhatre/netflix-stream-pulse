@@ -65,7 +65,7 @@ def main():
     
     # total_events = 9000       # takes around 30 minutes to complete
     
-    total_events = 1500       # takes around 5 minutes to complete
+    total_events = 1550       # takes around 5 minutes to complete
 
 
     for _ in range(total_events):

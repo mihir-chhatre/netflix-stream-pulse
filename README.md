@@ -38,6 +38,10 @@ The architecture is built upon a series of interconnected services and technolog
 2. Real-time Data Processing: An Apache Flink application is employed as a consumer, which subscribes to the Kafka topic. It processes these events in real-time, performing analytics to derive insights from the streaming data. Every 5 minutes, the aggregated data is stored in PostgreSQL tables for persistent storage and further analysis.
 
 3. Data Transformation and Loading: Upon completion of data production, a special 'complete' message is published to a separate Kafka topic. A PySpark application, listening to this second topic, triggers once it receives the 'complete' event. It then extracts data from the PostgreSQL tables, performs necessary transformations, and loads the processed data into Google BigQuery. This step is crucial for preparing the data for advanced analytics and visualization.
+<br>
+BigQuery tables are <u>partitioned by date and clustered by hour and minute</u>. Partitioning by date organizes data into separate segments for each date, significantly improving query performance and reducing costs by limiting the amount of data scanned for date-specific queries. Clustering by hour and minute further optimizes performance for queries involving these time elements, as data within each date partition is ordered based on hour and minute. This approach not only accelerates query execution but also aids in efficient data management, particularly for large datasets commonly used in time-based analytics.
+<br>
+ PySpark <u>transformations</u> include converting the window_end_utctime column into a date format and extracting the hour and minute components. Additionally, the original time column is dropped, and specific columns are selected and rearranged based on the target table name.
 
 4. Data Storage Optimization: In Google BigQuery, the tables are optimized with clustering and partitioning techniques. This ensures efficient data management and query performance, enabling scalable analytics solutions.
 
