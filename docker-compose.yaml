@@ -83,11 +83,14 @@ services:
   data-loader:
     build:
       context: ./data-upload
+      args:
+        GCP_CREDENTIALS: "<ADD JSON FILE NAME HERE>"  # # Example will look like => GCP_CREDENTIALS: "service_acc_file.json"
     depends_on:
       - kafka-producer
       - postgres
     platform: linux/amd64
     environment:
+      GCP_PROJECT: "<ADD PROJECT NAME HERE>"         # Example will look like => GCP_PROJECT: "dezoomcamp2024_finalproject"
       KAFKA_SERVER: "kafka:9092"
       ZOOKEEPER_SERVER: "zookeeper:32181"
       PRODUCER_INTERVAL: 100

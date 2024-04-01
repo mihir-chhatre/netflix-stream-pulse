@@ -17,30 +17,42 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-What things you need to install the software and how to install them:
-
 1. Docker - Follow the installation guide [here](https://docs.docker.com/engine/install/).
-2. A Google Cloud Platform (GCP) account. If you don't have one, set it up [here](https://cloud.google.com/).
+2. A Google Cloud Platform (GCP) account. If you don't have one, you can set one up [here](https://cloud.google.com/).
 
 ### Installation
 
 A step by step series of examples that tell you how to get a development env running:
 
-1. **Create a database in Google BigQuery (GBQ):**
-   - Database Name: `real_time_analytics`
+1. **Create a new project on Google Cloud with any name**
+   - Important note: Keep a track of the project name as you will have to use it later.
 
-2. **Service Account Setup:**
-   - Create a service account in GBQ with full permissions.
-   - Create a key and download the JSON credentials file.
+2. **Inside the project created in the above step, create a BigQuery dataset (refer on how to create dataset [here](https://cloud.google.com/bigquery/docs/datasets#create-dataset)):**
+   - Dataset Name: `real_time_analytics`
 
-3. **Configure the Project:**
+3. **Service Account Setup:**
+   - Serach for 'Service account' on the Google Cloud platform and click on 'Create Service Account Button'
+   - Add any name to the service account.
+   - Grant the service account 'BigQuery Admin' permission.
+   - Click 'Done' to complete.
+
+4. **Download the serive account key:**
+   - Click on the newly created service account and go into the 'Keys' tab.
+   - Click on 'Add Key' and create a new JSON key.
+   - Important step: Download this JSON key.
+
+5. **Configure the Project:**
    - Clone this repository.
-   - Navigate to the project folder in the terminal.
-   - Add the downloaded JSON file to the `data-upload` folder of this project.
+   - Important step: Add the downloaded JSON file from step 4 to the `data-upload` folder of this project.
+   - Important step: Open docker-compose.yaml file.
+   - Important step: Replace '<ADD JSON FILE NAME HERE>' with filename of JSON filename from above step.
+   - Important step: Replace '<ADD PROJECT NAME HERE>' with name of GCP project created in step 1.
+   
 
 4. **Run the Project:**
-   - Execute `docker-compose up -d` from inside the project folder.
-   - Note: This step will take approximately 50-90 seconds. The entire program will execute for approximately 5 minutes. Look out for the message '*** Data simulation completed! ***' in your terminal. Once you see this message, you can check your GBQ instance.
+   - Open the terminal inside 'netflix-stream-pulse' downloaded project folder. (This repo has 3 subfolders, docker-compose.yaml and README file)
+   - Execute `docker-compose up`.
+   - Note: This step will take approximately 2 minutes. The entire program will execute for approximately 5 minutes. Look out for the message '***  DATA SIMULATION COMPLETED ***' on your terminal. Once you see this message, you can check your GBQ instance.
 
 ## Contributing
 
