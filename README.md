@@ -1,12 +1,12 @@
 # Netflix-Stream-Pulse
 
 ## Project Overview
-The Netflix-Stream-Pulse project is designed simulating Netflix user activity, providing a platform for real-time data processing and analytics.
+The Netflix-Stream-Pulse project is designed to simulate Netflix user activity, providing a platform for real-time data processing and analytics.
 
 <br>
 
 ## Problem Statement
-In today’s fast-paced online streaming arena, swiftly and accurately understanding user behavior is not just beneficial; it's essential. The challenge lies in the sheer volume and rapidity of data generated, which can be overwhelming. Traditional data processing methods often stumble under the weight of such real-time, heavy data flows, leading to critical delays in deriving insights and impacting decision-making. The Netflix-Stream-Pulse project ambitiously confronts this challenge. It meticulously simulates an environment where continuous streams of user data—encompassing viewing patterns, profile interactions, and more—are efficiently captured and processed. Leveraging a robust combination of cutting-edge technologies like Apache Kafka, Apache Flink, PostgreSQL, PySpark, and Google BigQuery, the project crafts an innovative end-to-end pipeline. This sophisticated setup not only adeptly handles the demands of large-scale, real-time data but also excels in extracting valuable insights from it. By processing and analyzing this streaming data in a scalable, efficient manner, the project illuminates how strategic data utilization can significantly enhance user experiences in the streaming service sector, transforming raw data into a goldmine of actionable intelligence.
+In today’s fast-paced online streaming arena, swiftly and accurately understanding user behavior is not just beneficial; it's essential. The challenge lies in the sheer volume and rapidity of data generated, which can be overwhelming. Traditional data processing methods often stumble under the weight of such real-time, heavy data flows, leading to critical delays in deriving insights and impacting decision-making. The Netflix-Stream-Pulse project ambitiously confronts this challenge. It meticulously simulates an environment where continuous streams of user data—encompassing viewing patterns, user profiles, and more—are efficiently captured and processed. Leveraging a robust combination of cutting-edge technologies like Apache Kafka, Apache Flink, PostgreSQL, PySpark, and Google BigQuery, the project crafts an innovative end-to-end pipeline. This sophisticated setup not only adeptly handles the demands of large-scale, real-time data but also excels in extracting valuable insights from it. By processing and analyzing this streaming data in a scalable, efficient manner, the project illuminates how strategic data utilization can significantly enhance user experiences in the streaming service sector, transforming raw data into a goldmine of actionable intelligence.
 
 The project is centered around three key patterns of real-time analytics:
 
@@ -38,11 +38,10 @@ The architecture is built upon a series of interconnected services and technolog
 2. Real-time Data Processing: An Apache Flink application is employed as a consumer, which subscribes to the Kafka topic. It processes these events in real-time, performing analytics to derive insights from the streaming data. Every 5 minutes, the aggregated data is stored in PostgreSQL tables for persistent storage and further analysis.
 
 3. Data Transformation and Loading: Upon completion of data production, a special 'complete' message is published to a separate Kafka topic. A PySpark application, listening to this second topic, triggers once it receives the 'complete' event. It then extracts data from the PostgreSQL tables, performs necessary transformations, and loads the processed data into Google BigQuery. This step is crucial for preparing the data for advanced analytics and visualization.
-   - BigQuery tables are partitioned by date and clustered by hour and minute. Partitioning by date organizes data into separate segments for each date, significantly improving query performance and reducing costs by limiting the amount of data scanned for date-specific queries. Clustering by hour and minute further optimizes performance for queries involving these time elements, as data within each date partition is ordered based on hour and minute. This approach not only accelerates query execution but also aids in efficient data management, particularly for large datasets commonly used in time-based analytics.
    - PySpark transformations include converting the window_end_utctime column into a date format and extracting the hour and minute components. Additionally, the original time column is dropped, and specific columns are selected and rearranged based on the target table name.
 
 
-4. Data Storage Optimization: In Google BigQuery, the tables are optimized with clustering and partitioning techniques. This ensures efficient data management and query performance, enabling scalable analytics solutions.
+4. Data Storage Optimization: BigQuery tables are partitioned by date and clustered by hour and minute. Partitioning by date organizes data into separate segments for each date, significantly improving query performance and reducing costs by limiting the amount of data scanned for date-specific queries. Clustering by hour and minute further optimizes performance for queries involving these time elements, as data within each date partition is ordered based on hour and minute. This approach not only accelerates query execution but also aids in efficient data management, particularly for large datasets commonly used in time-based analytics.
 
 5. Visualization: Finally, Looker Studio is used to create interactive dashboards and visualizations. These visualizations provide insights into various user metrics such as device usage, genre preferences, location-based trends, maturity ratings, gender, and age group distributions.
 
@@ -119,6 +118,14 @@ If above links are down, please use the below screenshots as reference:
    ![Location & Maturity Rating dashboard](/images/LocationMR.png "Location & Maturity Raing dashboard")
    - Gender & Age Group trends: <br>
    ![Gender & Age Group dashboard](/images/GenderAgeGroup.png "Gender & Age Group dashboard")
+
+
+<br>
+
+
+## Future work
+   - Create a bespoke connector enabling Google BigQuery to function as a sink for Apache Flink. An alternative approach might involve implementing 'change data capture' to gradually retrieve data from PostgreSQL tables and transfer it to BigQuery.
+   - Perform more advanced real-time analytics such as tracking user jouneys and drop-off points.
 
 
 <br>
