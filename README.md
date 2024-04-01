@@ -2,9 +2,10 @@
 
 > Status: **Complete**
 
-
 ## Project Overview
 The Netflix-Stream-Pulse project is designed simulating Netflix user activity, providing a platform for real-time data processing and analytics.
+
+<br>
 
 ## Problem Statement
 In today’s fast-paced online streaming arena, swiftly and accurately understanding user behavior is not just beneficial; it's essential. The challenge lies in the sheer volume and rapidity of data generated, which can be overwhelming. Traditional data processing methods often stumble under the weight of such real-time, heavy data flows, leading to critical delays in deriving insights and impacting decision-making. The Netflix-Stream-Pulse project ambitiously confronts this challenge. It meticulously simulates an environment where continuous streams of user data—encompassing viewing patterns, profile interactions, and more—are efficiently captured and processed. Leveraging a robust combination of cutting-edge technologies like Apache Kafka, Apache Flink, PostgreSQL, PySpark, and Google BigQuery, the project crafts an innovative end-to-end pipeline. This sophisticated setup not only adeptly handles the demands of large-scale, real-time data but also excels in extracting valuable insights from it. By processing and analyzing this streaming data in a scalable, efficient manner, the project illuminates how strategic data utilization can significantly enhance user experiences in the streaming service sector, transforming raw data into a goldmine of actionable intelligence.
@@ -110,11 +111,11 @@ Links to Dashboards -
 
 <br>
 
-If above links are down, please use the below screenshots are reference:
-   - Device & Genere trends: <br>
-   ![Device & Genere dashboard](/images/DeviceGenre.png "Device & Genere dashboard")
-   - Location & Maturity Raing trends: <br>
-   ![Location & Maturity Raing dashboard](/images/LocationMR.png "Location & Maturity Raing dashboard")
+If above links are down, please use the below screenshots as reference:
+   - Device & Genre trends: <br>
+   ![Device & Genre dashboard](/images/DeviceGenre.png "Device & Genere dashboard")
+   - Location & Maturity Rating trends: <br>
+   ![Location & Maturity Rating dashboard](/images/LocationMR.png "Location & Maturity Raing dashboard")
    - Gender & Age Group trends: <br>
    ![Gender & Age Group dashboard](/images/GenderAgeGroup.png "Gender & Age Group dashboard")
 
@@ -123,7 +124,7 @@ If above links are down, please use the below screenshots are reference:
 
 ## Authors
 
-* **Mihr Chhatre** - [YourGithubProfile](https://github.com/mihir-chhatre)
+* **Mihr Chhatre** - [Github](https://github.com/mihir-chhatre)
 
 <br>
 
