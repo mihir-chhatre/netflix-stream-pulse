@@ -9,7 +9,7 @@
 *(Description of the architecture)*
 
 #### Architecture Diagram
-*(To be added)*
+![Architecture Diagram](/images/architecture_diagram.png "Architecture Diagram")
 
 ## Getting Started
 
